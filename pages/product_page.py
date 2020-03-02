@@ -25,3 +25,13 @@ class ProductPage(BasePage):
         product_price_message = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE_MESSAGE).text
         assert product_price == product_price_message, \
             f"The price of add product '{product_price_message}' is not correct. Should be '{product_price}"
+
+    # Проверка, что элемент не появляется на странице
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Success message is presented, but should not be"
+
+    # Проверка, что элемент исчезает
+    def should_be_out_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Success message is not disappeared, but should be"
