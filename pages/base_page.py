@@ -14,6 +14,11 @@ class BasePage():
         self.url = url
         self.browser.implicitly_wait(timeout)
 
+    # Переход в корзину
+    def go_to_the_basket(self):
+        button_basket = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
+        button_basket.click()
+
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
