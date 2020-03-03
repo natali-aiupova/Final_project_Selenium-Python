@@ -23,4 +23,5 @@ class BasePageLocators():
     BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini a.btn")
     BASKET_MESSAGE = (By.CSS_SELECTOR, "#content_inner")
     BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
