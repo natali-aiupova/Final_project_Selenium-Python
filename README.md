@@ -6,6 +6,15 @@ ____
 Версия Python: 3.8.1
 ____
 
+## Важное замечание
+Из-за разницы в версиях пакетов, иногда могут падать ошибки типа:
+```
+from .pages.product_page import ProductPage E ImportError: attempted relative import with no known parent package
+```
+Попробуйте запустить код, убрав первую точку перед pages (или добавив, соответственно, если её нет).
+
+____
+
 ## Описание файлов и папок
 
 1. Папка **`pages`**: содержит файлы Page Object.
