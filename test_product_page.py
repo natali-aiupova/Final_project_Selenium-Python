@@ -93,7 +93,6 @@ class TestUserAddToBasketFromProductPage():
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         product_page = ProductPage(browser, link)
         product_page.open()
-        product_page = ProductPage(browser, browser.current_url)
         product_page.should_not_be_success_message() # реализовано в product_page.py
 
     # Проверка, что пользователь может добавить товар в корзину
@@ -102,7 +101,6 @@ class TestUserAddToBasketFromProductPage():
         link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
         product_page = ProductPage(browser, link)
         product_page.open()
-        product_page = ProductPage(browser, browser.current_url)
         product_page.add_product_to_cart()
         product_page.solve_quiz_and_get_code()
         product_page.should_be_correct_add_product_to_cart() # реализовано в product_page.py
