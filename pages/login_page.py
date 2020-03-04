@@ -13,6 +13,7 @@ class LoginPage(BasePage):
         register_button = self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON)
         register_button.click()
 
+    # Проверка корректности url (страница логина), наличия форм регистрации и входа
     def should_be_login_page(self):
         self.should_be_login_url()
         self.should_be_login_form()
