@@ -2,6 +2,7 @@
 Финальный проект курса "[Автоматизация тестирования с помощью Selenium и Python](https://stepik.org/course/575)"
 ____
 ОС: Windows 10 x64
+
 Версия Python: 3.8.1
 ____
 
