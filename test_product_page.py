@@ -6,6 +6,7 @@ from pages.basket_page import BasketPage
 from pages.login_page import LoginPage
 
 # Гость может добавить товар в корзину и проверка корректности добавления товара (название, цена)
+# Можно убрать строки с параметризацией и разкомментировать строку с сылкой внутри функции, чтобы тест запускался меньшее количество раз
 @pytest.mark.need_review
 @pytest.mark.parametrize("link", ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
@@ -18,7 +19,7 @@ from pages.login_page import LoginPage
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
 def test_guest_can_add_product_to_basket(browser, link):
-    link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+    # link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
     product_page = ProductPage(browser, link)
     product_page.open()
     product_page.add_product_to_cart() # реализовано в product_page.py
